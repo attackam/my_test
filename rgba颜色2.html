@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function getIntRandom(n,m) {
+        return Math.floor(Math.random() * (m - n + 1) + n);
+    }
+    function getColor() {
+        var r = getIntRandom(0,255);  
+        var g = getIntRandom(0,255);
+        var b = getIntRandom(0,255);
+        var a = Math.floor(Math.random() * 100) / 100;
+
+        console.log('rgba('+ r +','+ g +','+ b +','+ a +')');
+
+    }
+    getColor();
+</script>
+</html>

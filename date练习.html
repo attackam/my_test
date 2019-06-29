@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="datetime-local" id="pick">
+  <input type="button" value="按钮" id="btn">
+</body>
+<script>
+var pick = document.getElementById('pick');
+var btn = document.getElementById('btn');
+btn.onclick = function(){
+  var that = new Date(pick.value);
+  console.log(that);
+  var date = new Date();
+
+  console.log(date.getTime())
+  console.log(date.valueOf())
+  var thatMs = that.getTime();
+  var dateMs = date.getTime();
+
+  var timeInerval = Math.abs(thatMs - dateMs);
+  var second = Math.floor(timeInerval / 1000);
+  console.log(second);
+  var minute = Math.floor(second / 60);
+  console.log(minute);
+  var hour = Math.floor(minute / 60);
+  console.log(hour);
+  var day = Math.floor(hour / 24);
+  console.log(day);
+  console.log(hour % 24);
+}
+</script>
+</html>

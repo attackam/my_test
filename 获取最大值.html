@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function max() {
+        var max = arguments[0];
+        for(var i = 0;i < arguments.length;i++) {
+            if(max < arguments[i]) {
+                max = arguments[i];
+            }
+        }
+        return max;
+    }
+
+
+    console.log(Math.max(55,33,44,888,2222,9));
+    console.log(Math.min(55,33,44,888,2222,9));
+    console.log(88-99);
+    console.log(Math.abs(88-99));
+
+</script>
+</html>

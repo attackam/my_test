@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> 
+    <input type="datetime-local" id="now_time">
+    <input type="button" value="按钮" id="btn">
+</body>
+<script>
+    var now_time = document.getElementById('now_time');
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        var that = new Date(now_time.value).getTime();
+        var date = new Date().getTime();
+        var time = (date - that)/1000;
+        var day = Math.floor(time / 60 / 60 / 24);
+        var h = Math.floor(time / 60 / 60 % 24);
+        var m = Math.floor(time / 60 % 60) ;
+        var s = Math.floor(time % 60) ;
+
+        console.log(day+','+h+','+m+','+s);
+    }
+</script>
+</html>
